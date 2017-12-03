@@ -1,6 +1,9 @@
 # This file contains functions that are helpful for solving Project Euler problems.
 # It will grow as we get further into the problem sets.
 
+import numpy as np
+
+
 def is_int(x):
     """Checks if the passed number has a factional component."""
     if x - int(x) != 0:
