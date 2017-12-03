@@ -2,16 +2,17 @@
 # It will grow as we get further into the problem sets.
 
 def is_int(x):
-	"""Checks if the passed number is an integer/whole number or has a fractional component."""
+    """Checks if the passed number has a factional component."""
     if x - int(x) != 0:
         return False
     else:
         return True
 
+
 def palindrome(n):
-	"""Checks if the passed number is a palidrome."""
+    """Checks if the passed number is a palidrome."""
     num = n
-    r = 0 
+    r = 0
     while num > 0:
         d = num % 10
         r = r * 10 + d
@@ -21,8 +22,9 @@ def palindrome(n):
     else:
         return False
 
+
 def seive(n):
-	"""Returns a list of primes less than n."""
+    """Returns a list of primes less than n."""
     potentials = {i: True for i in range(2, int(n) + 1)}
     bound = int(np.sqrt(n))
     for i in range(2, bound + 1):
@@ -31,3 +33,5 @@ def seive(n):
                 potentials[j] = False
     primes = [f for f in potentials.keys() if potentials[f]]
     return primes
+
+# EOF
