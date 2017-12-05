@@ -37,4 +37,17 @@ def seive(n):
     primes = [f for f in potentials.keys() if potentials[f]]
     return primes
 
+
+def highest_pow_lt_n(n):
+    """Returns a list of smallest powers of primes less than n."""
+    primes_lt_n = seive(n)
+    pow_lt_n = []
+    for p in primes_lt_n:
+        i = 1
+        while p ** i < n:
+            i += 1
+        pow_lt_n.append(p ** (i - 1))
+    return pow_lt_n
+
 # EOF
+
