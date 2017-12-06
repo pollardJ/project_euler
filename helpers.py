@@ -13,7 +13,7 @@ def is_int(x):
 
 
 def palindrome(n):
-    """Checks if the passed number is a palidrome."""
+    """Checks if the passed number is a palindrome."""
     num = n
     r = 0
     while num > 0:
